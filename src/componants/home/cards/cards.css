@@ -1,0 +1,13 @@
+.card-css {
+  border-radius: 0px !important;
+}
+
+.card-img-1 {
+  border-radius: 0px !important;
+  aspect-ratio: 1980 / 1080;
+}
+
+.card-img-2 {
+  border-radius: 0px !important;
+  aspect-ratio: 1 / 1;
+}
