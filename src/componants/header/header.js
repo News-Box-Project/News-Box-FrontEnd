@@ -1,9 +1,9 @@
-import react, { Component } from "react";
+import react from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-export default class Header extends Component {
+export default class Header extends react.Component {
   render() {
     return (
       <div>
