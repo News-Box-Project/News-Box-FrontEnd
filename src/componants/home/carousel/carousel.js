@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import noImageLarge from '../assets/noImageLarge.png';
 import "./carousel.css";
 
 export default class CarouselComponant extends Component {
@@ -15,7 +16,7 @@ export default class CarouselComponant extends Component {
                   <Carousel.Item key={idx}>
                     <img
                       className="d-block mx-auto carousel-img w-100"
-                      src={news.image}
+                      src={news.image? news.image: noImageLarge}
                       alt="First slide"
                     />
                     <Carousel.Caption className="carousel-text-box">

@@ -19,11 +19,9 @@ export default class SecondaryNav extends React.Component {
     const result = await axios.get(
       "https://news-box-project.herokuapp.com/news"
     );
-    const filteredData = result.data.filter((news) => {
-      return news.image !== null;
-    });
+    
     this.setState({
-      news: filteredData,
+      news: result.data,
     });
   }
 
@@ -31,12 +29,20 @@ export default class SecondaryNav extends React.Component {
     const result = await axios.get(
       `https://news-box-project.herokuapp.com/category?categories=${category}`
     );
-    const filteredData = result.data.filter((news) => {
-      return news.image !== null;
-    });
+   
     this.setState({
-      news: filteredData,
+      news: result.data,
     });
+  };
+
+  handleSearch = async(e) => {
+    e.preventDefault();
+    const keyword=e.target.inputValue.value;
+    const url=`https://news-box-project.herokuapp.com/apinews?keywords=${keyword}`;
+    const newsData= await axios.get(url);
+    this.setState({
+      news:newsData.data
+    })
   };
 
   handleNewsBox = () => {
@@ -119,12 +125,17 @@ export default class SecondaryNav extends React.Component {
               </Nav>
             </Navbar.Collapse>
             <div className="search d-flex gap-2">
-              <input
-                type="text"
-                placeholder="Search"
-                className="search-input"
-              />
-              <button className="btn btn-light">Search</button>
+              <form className="d-flex gap-3" onSubmit={this.handleSearch}>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="search-input"
+                  id="inputValue"
+                />
+                <button type="submit" className="btn btn-light">
+                  Search
+                </button>
+              </form>
             </div>
           </Container>
         </Navbar>
