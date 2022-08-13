@@ -29,9 +29,7 @@ export default class Contact extends React.Component {
         controlId="floatingInput"
         label="Your massage"
         className="mb-3"
-      >
-         
-        
+      >      
         <Form.Control as="textarea" rows={5} type="text" placeholder="Hello..."style={{ height: '150px' }}/>
         <Form.Text className="text-muted">
           We'll never share your information with anyone else.
