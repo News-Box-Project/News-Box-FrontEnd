@@ -1,9 +1,9 @@
-import  { Component } from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-export default class Header extends Component {
+export default class Header extends React.Component {
   render() {
     return (
       <div>
@@ -17,9 +17,8 @@ export default class Header extends Component {
             >
               <Nav>
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/">About</Nav.Link>
-                <Nav.Link href="/">Contact Us</Nav.Link>
-                <Nav.Link href="/">Admin</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
+                <Nav.Link href="/contact-us">Contact Us</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
