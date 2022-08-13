@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { Component } from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,7 +7,7 @@ import CardsComponant from "../cards/cards";
 import CarouselComponant from "../carousel/carousel";
 import "./secondaryNav.css";
 
-export default class SecondaryNav extends Component {
+export default class SecondaryNav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
