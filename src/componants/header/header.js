@@ -1,15 +1,16 @@
-import react from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
-export default class Header extends react.Component {
+import logo from './logo/logo.png';
+import './header.css';
+export default class Header extends React.Component {
   render() {
     return (
       <div>
         <Navbar bg="light" expand="lg">
           <Container>
-            <Navbar.Brand href="/">News Box</Navbar.Brand>
+            <Navbar.Brand className="d-flex gap-3 align-items-center fs-2 text-uppercase" href="/"><img className="logo-img" src={logo} alt="logo"/>News Box</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse
               id="basic-navbar-nav"
@@ -17,9 +18,8 @@ export default class Header extends react.Component {
             >
               <Nav>
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/">About</Nav.Link>
-                <Nav.Link href="/">Contact Us</Nav.Link>
-                <Nav.Link href="/">Admin</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
+                <Nav.Link href="/contact-us">Contact Us</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

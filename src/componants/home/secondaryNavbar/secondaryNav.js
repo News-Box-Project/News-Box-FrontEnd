@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { Component } from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,7 +7,7 @@ import CardsComponant from "../cards/cards";
 import CarouselComponant from "../carousel/carousel";
 import "./secondaryNav.css";
 
-export default class SecondaryNav extends Component {
+export default class SecondaryNav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,11 +19,9 @@ export default class SecondaryNav extends Component {
     const result = await axios.get(
       "https://news-box-project.herokuapp.com/news"
     );
-    const filteredData = result.data.filter((news) => {
-      return news.image !== null;
-    });
+    
     this.setState({
-      news: filteredData,
+      news: result.data,
     });
   }
 
@@ -31,12 +29,20 @@ export default class SecondaryNav extends Component {
     const result = await axios.get(
       `https://news-box-project.herokuapp.com/category?categories=${category}`
     );
-    const filteredData = result.data.filter((news) => {
-      return news.image !== null;
-    });
+   
     this.setState({
-      news: filteredData,
+      news: result.data,
     });
+  };
+
+  handleSearch = async(e) => {
+    e.preventDefault();
+    const keyword=e.target.inputValue.value;
+    const url=`https://news-box-project.herokuapp.com/apinews?keywords=${keyword}`;
+    const newsData= await axios.get(url);
+    this.setState({
+      news:newsData.data
+    })
   };
 
   handleNewsBox = () => {
@@ -119,12 +125,17 @@ export default class SecondaryNav extends Component {
               </Nav>
             </Navbar.Collapse>
             <div className="search d-flex gap-2">
-              <input
-                type="text"
-                placeholder="Search"
-                className="search-input"
-              />
-              <button className="btn btn-light">Search</button>
+              <form className="d-flex gap-3" onSubmit={this.handleSearch}>
+                <input
+                  type="text"
+                  placeholder="Search"
+                  className="search-input"
+                  id="inputValue"
+                />
+                <button type="submit" className="btn btn-light">
+                  Search
+                </button>
+              </form>
             </div>
           </Container>
         </Navbar>
