@@ -1,34 +1,15 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
-import data from "../data.json";
 import "./cards.css";
 
 export default class CardsComponant extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      news: data,
-      x: [],
-    };
-  }
-
-  componentDidMount() {
-    const filterNews = this.state.news.data.filter((news) => {
-      if (news.image !== null) {
-        return news;
-      }
-    });
-    this.setState({
-      x: filterNews,
-    });
-  }
   render() {
     return (
       <Container>
         <div className="cards-container mb-5">
           <Row xs={1} className="g-4">
-            {this.state.x.map((news, idx) => {
+            {this.props.news.map((news, idx) => {
               if (idx >= 4 && idx < 18) {
                 if (
                   idx === 4 ||
@@ -44,7 +25,7 @@ export default class CardsComponant extends Component {
                       <Card className="cards h-100 card-css">
                         <Card.Img
                           variant="top"
-                          src={`https://picsum.photos/1980/1080?fifa=${idx}`}
+                          src={news.image}
                           className="card-img-1"
                         />
                         <Card.Body>
@@ -71,7 +52,7 @@ export default class CardsComponant extends Component {
                       <Card className="cards h-100 card-css">
                         <Card.Img
                           variant="top"
-                          src={`https://picsum.photos/1980/1980?fifa=${idx}`}
+                          src={news.image}
                           className="card-img-2"
                         />
                         <Card.Body>
