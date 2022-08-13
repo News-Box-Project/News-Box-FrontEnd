@@ -3,7 +3,7 @@ import Header from "./componants/header/header";
 import CardsComponant from "./componants/home/cards/cards";
 import CarouselComponant from "./componants/home/carousel/carousel";
 import SecondaryNav from "./componants/home/secondaryNavbar/secondaryNav";
-
+import Footer from './componants/Footer/Foote';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
       <SecondaryNav />
       <CarouselComponant />
       <CardsComponant />
+      <Footer />
     </div>
   );
 }
