@@ -1,34 +1,23 @@
 import "./App.css";
 import Header from "./componants/header/header";
-import CardsComponant from "./componants/home/cards/cards";
-import CarouselComponant from "./componants/home/carousel/carousel";
-import SecondaryNav from "./componants/home/secondaryNavbar/secondaryNav";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./componants/About";
 import Contact from "./componants/Contact";
+import Home from "./componants/home/home";
 import Footer from "./componants/footer/footer";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Admin from "./componants/Admin";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import Admin from "./componants/Admin";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
-        <SecondaryNav />
       </div>
 
       <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <>
-              <CarouselComponant /> <CardsComponant />
-            </>
-          }
-        ></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route exact path="/about" element={<About />}></Route>
         <Route exact path="/contact-us" element={<Contact />}></Route>
         <Route exact path="/admin" element={<Admin />}></Route>
