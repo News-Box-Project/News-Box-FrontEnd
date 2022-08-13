@@ -2,6 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import "./cards.css";
+import noImageSmall from '../assets/noImageSmall.png';
+import noImageLarge from '../assets/noImageLarge.png';
 
 export default class CardsComponant extends React.Component {
   render() {
@@ -26,7 +28,7 @@ export default class CardsComponant extends React.Component {
                         <Card className="cards h-100 card-css">
                           <Card.Img
                             variant="top"
-                            src={news.image}
+                            src={news.image? news.image: noImageLarge}
                             className="card-img-1"
                           />
                           <Card.Body>
@@ -53,7 +55,7 @@ export default class CardsComponant extends React.Component {
                         <Card className="cards h-100 card-css">
                           <Card.Img
                             variant="top"
-                            src={news.image}
+                            src={news.image? news.image: noImageSmall}
                             className="card-img-2"
                           />
                           <Card.Body>
