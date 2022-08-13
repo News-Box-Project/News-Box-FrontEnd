@@ -5,8 +5,8 @@ import Admin from "./componants/Admin";
 import Contact from "./componants/Contact/Contact";
 import Footer from "./componants/Footer/Foote";
 import Header from "./componants/header/header";
+import About from "./componants/about/about";
 import Home from "./componants/home/home";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
