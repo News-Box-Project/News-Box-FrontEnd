@@ -17,8 +17,8 @@ export default class About extends React.Component {
       <>
         <div className="about">
           <section id="ABOUT">
-            <div class="about-1">
-              <div class="heading-box">
+            <div className="about-1">
+              <div className="heading-box">
                 <h1 className="about-heading"> ABOUT US </h1>
               </div>
 
@@ -35,12 +35,12 @@ export default class About extends React.Component {
               </p>
             </div>
             <div id="about-2">
-              <div class="content-box-lg">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <div class="about-item text-center">
-                        <img src={image} className="w-100" />
+              <div className="content-box-lg">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={image} className="w-100" alt="Suhaib" />
                         <h3 className="pt-3">Suhaib Alnaji</h3>
                         <p>Computer Science.</p>
                         <p>
@@ -60,9 +60,9 @@ export default class About extends React.Component {
                         </a>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="about-item text-center">
-                        <img src={Ahmad} className="w-100" />
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Ahmad} className="w-100" alt="Ahmad" />
                         <h3 className="pt-3">Ahmad Jubran</h3>
                         <p>Computer Engineer.</p>
                         <p>
@@ -82,9 +82,9 @@ export default class About extends React.Component {
                         </a>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="about-item text-center">
-                        <img src={Sedra} className="w-100" />
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Sedra} className="w-100" alt="Sedra" />
                         <h3 className="pt-3">Sedra Al-Sabbagh</h3>
                         <p>Software Engineering.</p>
                         <p>
@@ -104,9 +104,9 @@ export default class About extends React.Component {
                         </a>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="about-item text-center">
-                        <img src={Fahad} className="w-100" />
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Fahad} className="w-100" alt="Fahad" />
                         <h3 className="pt-3">Fahad Zidan</h3>
                         <p>Electrical Power Engineer.</p>
                         <p>
@@ -126,9 +126,9 @@ export default class About extends React.Component {
                         </a>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="about-item text-center">
-                        <img src={Qais} className="w-100" />
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Qais} className="w-100" alt="Qais" />
                         <h3 className="pt-3">Qais Alsgher</h3>
                         <p>Software Engineering.</p>
                         <p>
@@ -148,9 +148,9 @@ export default class About extends React.Component {
                         </a>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="about-item text-center">
-                        <img src={Wlla} className="w-100" />
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Wlla} className="w-100" alt="wlla" />
                         <h3 className="pt-3">wlla Talafha</h3>
                         <p>Electronics engineer.</p>
                         <p>
@@ -170,9 +170,9 @@ export default class About extends React.Component {
                         </a>
                       </div>
                     </div>
-                    <div class="col-md-4">
-                      <div class="about-item text-center">
-                        <img src={Abdullah} className="w-100" />
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Abdullah} className="w-100" alt="Abdullah" />
                         <h3 className="pt-3">Abdullah Smadi</h3>
                         <p>Computer Science.</p>
                         <p>
