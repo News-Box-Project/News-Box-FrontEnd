@@ -1,15 +1,17 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Admin from "./componants/Admin";
+import Admin from "./componants/admin/admin.js";
 import Contact from "./componants/Contact/Contact";
 import Footer from "./componants/Footer/Foote";
 import Header from "./componants/header/header";
 import About from "./componants/about/about";
 import Home from "./componants/home/home";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 function App() {
   return (
+<>
+    
+      
     <Router>
       <div className="App">
         <Header />
@@ -22,6 +24,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+</>
   );
 }
 
