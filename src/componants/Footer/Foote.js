@@ -9,7 +9,7 @@ export default class Footer extends React.Component  {
 <MDBFooter bgColor='dark' className='text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block text-white'>
-          <span>Feel free to get in touch with us❤️</span>
+          <span>Feel free to get in touch with us</span>
         </div>
 
       </section>
