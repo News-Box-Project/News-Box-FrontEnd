@@ -5,6 +5,7 @@
   import FloatingLabel from 'react-bootstrap/FloatingLabel';
   import "bootstrap/dist/css/bootstrap.min.css";
   import {Container, Row, Col} from "react-bootstrap";
+
   export default class Contact extends React.Component {
           render(){
               return(
@@ -78,3 +79,5 @@
               )
           }
       }
+
+    
