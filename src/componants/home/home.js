@@ -1,8 +1,8 @@
-import React, { Component } from "react";
 import axios from "axios";
-import SecondaryNav from "./secondaryNavbar/secondaryNav";
+import React, { Component } from "react";
 import CardsComponant from "./cards/cards";
 import CarouselComponant from "./carousel/carousel";
+import SecondaryNav from "./secondaryNavbar/secondaryNav";
 
 export default class Home extends Component {
   constructor(props) {
@@ -16,7 +16,7 @@ export default class Home extends Component {
     const result = await axios.get(
       "https://news-box-project.herokuapp.com/news"
     );
-    
+
     this.setState({
       news: result.data,
     });
@@ -26,20 +26,26 @@ export default class Home extends Component {
     const result = await axios.get(
       `https://news-box-project.herokuapp.com/category?categories=${category}`
     );
-   
+    const filteredNews = result.data.filter((item) => {
+      return item.image !== null;
+    });
+
     this.setState({
-      news: result.data,
+      news: filteredNews,
     });
   };
 
-  handleSearch = async(e) => {
+  handleSearch = async (e) => {
     e.preventDefault();
-    const keyword=e.target.inputValue.value;
-    const url=`https://news-box-project.herokuapp.com/apinews?keywords=${keyword}`;
-    const newsData= await axios.get(url);
+    const keyword = e.target.inputValue.value;
+    const url = `https://news-box-project.herokuapp.com/apinews?keywords=${keyword}`;
+    const newsData = await axios.get(url);
+    const filteredNews = newsData.data.filter((item) => {
+      return item.image !== null;
+    });
     this.setState({
-      news:newsData.data
-    })
+      news: filteredNews,
+    });
   };
 
   handleNewsBox = () => {
@@ -71,10 +77,18 @@ export default class Home extends Component {
   };
 
   render() {
-
     return (
       <div>
-        <SecondaryNav  handleSearch={this.handleSearch} handleNewsBox={this.handleNewsBox} handleSport={this.handleSport}   handleHealth={this.handleHealth}  handleBusiness={this.handleBusiness}  handleEntertainment={this.handleEntertainment} handleScience={this.handleScience} handleTechnology={this.handleTechnology}/>
+        <SecondaryNav
+          handleSearch={this.handleSearch}
+          handleNewsBox={this.handleNewsBox}
+          handleSport={this.handleSport}
+          handleHealth={this.handleHealth}
+          handleBusiness={this.handleBusiness}
+          handleEntertainment={this.handleEntertainment}
+          handleScience={this.handleScience}
+          handleTechnology={this.handleTechnology}
+        />
         <CarouselComponant news={this.state.news} />
         <CardsComponant news={this.state.news} />
       </div>
