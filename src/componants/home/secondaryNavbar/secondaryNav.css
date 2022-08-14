@@ -11,3 +11,7 @@
 .secondary-nav-link:link:active {
   color: #fff;
 }
+
+.search-btn {
+  border-radius: 0;
+}

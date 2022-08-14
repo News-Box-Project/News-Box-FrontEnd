@@ -5,13 +5,15 @@ import Navbar from "react-bootstrap/Navbar";
 import "./secondaryNav.css";
 
 export default class SecondaryNav extends React.Component {
-
   render() {
     return (
       <div>
         <Navbar bg="dark" expand="lg">
           <Container>
-            <Navbar.Collapse id="basic-navbar-nav">
+            <Navbar.Collapse
+              id="basic-navbar-nav"
+              className="d-flex justify-content-between"
+            >
               <Nav>
                 <Nav.Link
                   onClick={this.props.handleNewsBox}
@@ -56,20 +58,23 @@ export default class SecondaryNav extends React.Component {
                   Science
                 </Nav.Link>
               </Nav>
+              <div className="search d-flex gap-2">
+                <form
+                  className="d-flex gap-3"
+                  onSubmit={this.props.handleSearch}
+                >
+                  <input
+                    type="text"
+                    placeholder="Search"
+                    className="search-input pe-5 ps-3"
+                    id="inputValue"
+                  />
+                  <button type="submit" className="btn btn-light search-btn">
+                    Search
+                  </button>
+                </form>
+              </div>
             </Navbar.Collapse>
-            <div className="search d-flex gap-2">
-              <form className="d-flex gap-3" onSubmit={this.props.handleSearch}>
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="search-input"
-                  id="inputValue"
-                />
-                <button type="submit" className="btn btn-light">
-                  Search
-                </button>
-              </form>
-            </div>
           </Container>
         </Navbar>
       </div>
