@@ -34,7 +34,7 @@ export default class Header extends React.Component {
                 </Nav.Link>
                 <Nav.Link
                   className="fs-5 text-uppercase px-3 fw-bold"
-                  href="/contact"
+                  href="/contact-us"
                 >
                   Contact Us
                 </Nav.Link>
