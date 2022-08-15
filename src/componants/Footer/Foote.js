@@ -1,11 +1,11 @@
-import React from "react";
 import {
-  MDBFooter,
-  MDBContainer,
-  MDBRow,
   MDBCol,
+  MDBContainer,
+  MDBFooter,
   MDBIcon,
+  MDBRow,
 } from "mdb-react-ui-kit";
+import React from "react";
 
 export default class Footer extends React.Component {
   render() {
