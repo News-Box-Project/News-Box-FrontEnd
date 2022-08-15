@@ -7,6 +7,10 @@ import Form from "react-bootstrap/Form";
 import "./contact.css";
 import Screenshot_118 from "./Screenshot_118.png";
 export default class Contact extends React.Component {
+  handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   render() {
     return (
       <>
@@ -20,7 +24,10 @@ export default class Contact extends React.Component {
         </p>
         <Container className="contact-container d-flex justify-content-center align-items-center mb-5">
           <div className="wrap-contact100">
-            <form className="contact100-form validate-form">
+            <form
+              className="contact100-form validate-form"
+              onSubmit={this.handleSubmit}
+            >
               <span className="contact100-form-title">Send Us A Message</span>
               <label className="label-input100" htmlFor="first-name">
                 Tell us your name *
