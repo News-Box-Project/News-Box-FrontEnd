@@ -7,8 +7,11 @@ import Contact from "./componants/contact/contact";
 import Footer from "./componants/footer/footer";
 import Header from "./componants/header/header";
 import Home from "./componants/home/home";
+import { useAuth0 } from '@auth0/auth0-react';
+import LoginButton from "./componants/admin/login";
 
 function App() {
+  const { isAuthenticated } = useAuth0();
   return (
     <Router>
       <div className="App">
@@ -17,7 +20,8 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/contact-us" element={<Contact />}></Route>
-          <Route exact path="/admin" element={<Admin />}></Route>
+          <Route exact path="/admin"
+            element={isAuthenticated ? <Admin /> : <LoginButton />}></Route>
         </Routes>
         <Footer />
       </div>
