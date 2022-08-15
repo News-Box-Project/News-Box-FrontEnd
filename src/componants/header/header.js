@@ -8,7 +8,7 @@ export default class Header extends React.Component {
   render() {
     return (
       <div>
-        <Navbar bg="light" expand="lg">
+        <Navbar expand="lg">
           <Container>
             <Navbar.Brand
               className="d-flex gap-3 align-items-center fs-2 text-uppercase"

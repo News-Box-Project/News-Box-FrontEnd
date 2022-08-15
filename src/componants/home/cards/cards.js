@@ -34,10 +34,10 @@ export default class CardsComponant extends React.Component {
                           <Card.Body>
                             <div className="d-flex justify-content-around">
                               <span>{news.category}</span>
-                              <p>{news.author}</p>
+                              <p className="mb-2 fw-bold">{news.author}</p>
                               <span>{news.published_at.slice(0, 10)}</span>
                             </div>
-                            <h3>{news.title}</h3>
+                            <h3 className="fw-bold">{news.title}</h3>
                             <p>
                               {news.description.slice(0, 200)}...
                               <a
@@ -63,10 +63,10 @@ export default class CardsComponant extends React.Component {
                           <Card.Body>
                             <div className="d-flex justify-content-around">
                               <span>{news.category}</span>
-                              <p>{news.author}</p>
+                              <p className="mb-2 fw-bold">{news.author}</p>
                               <span>{news.published_at.slice(0, 10)}</span>
                             </div>
-                            <h3>{news.title}</h3>
+                            <h3 className="fw-bold">{news.title}</h3>
                             <p>
                               {news.description.slice(0, 80)}...
                               <a
