@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import CardsComponant from "./cards/cards";
 import CarouselComponant from "./carousel/carousel";
 import SecondaryNav from "./secondaryNavbar/secondaryNav";
-
+import Footer from "../footer/footer";
 export default class Home extends Component {
   constructor(props) {
     super(props);
