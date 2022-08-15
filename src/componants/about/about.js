@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import { AiOutlineLinkedin } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 import { GoMarkGithub } from "react-icons/go";
 import "./about.css";
 import Abdullah from "./abt-img/abd.jpg";
@@ -42,11 +42,11 @@ export default class About extends React.Component {
                       <div className="about-item text-center">
                         <img src={image} className="w-100" alt="Suhaib" />
                         <h3 className="pt-3">Suhaib Alnaji</h3>
-                        <p>Computer Science.</p>
-                        <p>
-                          Contact Info: <br />
-                        </p>
-                        <a
+                        <p>Computer Science</p>
+
+                         <div className="icons-display">
+                          
+                         <a
                           className="about-icon"
                           href="https://github.com/SuhaibAln"
                         >
@@ -56,18 +56,19 @@ export default class About extends React.Component {
                           className="about-icon"
                           href="https://www.linkedin.com/in/suhaib-alnaji-0835181b9"
                         >
-                          <AiOutlineLinkedin />
+                          <FaLinkedinIn />
                         </a>
+                          
+                           </div>
+                        
                       </div>
                     </div>
                     <div className="col-md-4">
                       <div className="about-item text-center">
                         <img src={Ahmad} className="w-100" alt="Ahmad" />
                         <h3 className="pt-3">Ahmad Jubran</h3>
-                        <p>Computer Engineer.</p>
-                        <p>
-                          Contact Info: <br />
-                        </p>
+                        <p>Computer Engineer</p>
+                        <div className="icons-display">
                         <a
                           className="about-icon"
                           href="https://github.com/ahmadjubran"
@@ -78,18 +79,17 @@ export default class About extends React.Component {
                           className="about-icon"
                           href="https://www.linkedin.com/in/ahmad-jubran-44202a168/"
                         >
-                          <AiOutlineLinkedin />
+                          <FaLinkedinIn />
                         </a>
+                        </div>
                       </div>
                     </div>
                     <div className="col-md-4">
                       <div className="about-item text-center">
                         <img src={Sedra} className="w-100" alt="Sedra" />
                         <h3 className="pt-3">Sedra Al-Sabbagh</h3>
-                        <p>Software Engineering.</p>
-                        <p>
-                          Contact Info: <br />
-                        </p>
+                        <p>Software Engineering</p>
+                        <div className="icons-display">
                         <a
                           className="about-icon"
                           href="https://github.com/Sadrah-Alsabagh"
@@ -100,18 +100,16 @@ export default class About extends React.Component {
                           className="about-icon"
                           href="https://www.linkedin.com/in/sedra-al-sabbagh-a6987b246/"
                         >
-                          <AiOutlineLinkedin />
-                        </a>
+                          <FaLinkedinIn />
+                        </a></div>
                       </div>
                     </div>
                     <div className="col-md-4">
                       <div className="about-item text-center">
                         <img src={Fahad} className="w-100" alt="Fahad" />
                         <h3 className="pt-3">Fahad Zidan</h3>
-                        <p>Electrical Power Engineer.</p>
-                        <p>
-                          Contact Info: <br />
-                        </p>
+                        <p>Electrical Power Engineer</p>
+                        <div className="icons-display">
                         <a
                           className="about-icon"
                           href="https://github.com/fha96"
@@ -122,18 +120,16 @@ export default class About extends React.Component {
                           className="about-icon"
                           href="https://www.linkedin.com/in/fahad-rimawe-9832a9172"
                         >
-                          <AiOutlineLinkedin />
-                        </a>
+                          <FaLinkedinIn/>
+                        </a></div>
                       </div>
                     </div>
                     <div className="col-md-4">
                       <div className="about-item text-center">
                         <img src={Qais} className="w-100" alt="Qais" />
                         <h3 className="pt-3">Qais Alsgher</h3>
-                        <p>Software Engineering.</p>
-                        <p>
-                          Contact Info: <br />
-                        </p>
+                        <p>Software Engineering</p>
+                        <div className="icons-display">
                         <a
                           className="about-icon"
                           href="https://github.com/qais-alsgher"
@@ -144,18 +140,16 @@ export default class About extends React.Component {
                           className="about-icon"
                           href="https://www.linkedin.com/in/qais-alsgher-885902237/"
                         >
-                          <AiOutlineLinkedin />
-                        </a>
+                          <FaLinkedinIn />
+                        </a></div>
                       </div>
                     </div>
                     <div className="col-md-4">
                       <div className="about-item text-center">
                         <img src={Wlla} className="w-100" alt="wlla" />
                         <h3 className="pt-3">wlla Talafha</h3>
-                        <p>Electronics engineer.</p>
-                        <p>
-                          Contact Info: <br />
-                        </p>
+                        <p>Electronics engineer</p>
+                        <div className="icons-display">
                         <a
                           className="about-icon"
                           href="https://github.com/WllaTalafha"
@@ -166,18 +160,16 @@ export default class About extends React.Component {
                           className="about-icon"
                           href="https://www.linkedin.com/in/wlla-talafha-54b528246"
                         >
-                          <AiOutlineLinkedin />
-                        </a>
+                          <FaLinkedinIn />
+                        </a></div>
                       </div>
                     </div>
                     <div className="col-md-4">
                       <div className="about-item text-center">
                         <img src={Abdullah} className="w-100" alt="Abdullah" />
                         <h3 className="pt-3">Abdullah Smadi</h3>
-                        <p>Computer Science.</p>
-                        <p>
-                          Contact Info: <br />
-                        </p>
+                        <p>Computer Science</p>
+                        <div className="icons-display">
                         <a
                           className="about-icon"
                           href="https://github.com/Abdsmadi4"
@@ -188,8 +180,8 @@ export default class About extends React.Component {
                           className="about-icon"
                           href="https://www.linkedin.com/in/abdallah-smadi-68b093111/"
                         >
-                          <AiOutlineLinkedin />
-                        </a>
+                          <FaLinkedinIn />
+                        </a></div>
                       </div>
                     </div>
                   </div>
