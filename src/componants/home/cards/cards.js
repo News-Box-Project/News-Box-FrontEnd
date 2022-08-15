@@ -1,9 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
+import { HiArrowNarrowRight } from "react-icons/hi";
+import noImageLarge from "../assets/noImageLarge.png";
+import noImageSmall from "../assets/noImageSmall.png";
 import "./cards.css";
-import noImageSmall from '../assets/noImageSmall.png';
-import noImageLarge from '../assets/noImageLarge.png';
 
 export default class CardsComponant extends React.Component {
   render() {
@@ -28,7 +28,7 @@ export default class CardsComponant extends React.Component {
                         <Card className="cards h-100 card-css">
                           <Card.Img
                             variant="top"
-                            src={news.image? news.image: noImageLarge}
+                            src={news.image ? news.image : noImageLarge}
                             className="card-img-1"
                           />
                           <Card.Body>
@@ -40,10 +40,10 @@ export default class CardsComponant extends React.Component {
                             <p>{news.author}</p>
                             <p>{news.description}</p>
                             <a
-                              className="text-decoration-none text-dark"
+                              className="text-decoration-none bg-dark text-white p-2"
                               href={news.url}
                             >
-                              Read More <FontAwesomeIcon icon="arrow-right" />
+                              Read More <HiArrowNarrowRight />
                             </a>
                           </Card.Body>
                         </Card>
@@ -55,7 +55,7 @@ export default class CardsComponant extends React.Component {
                         <Card className="cards h-100 card-css">
                           <Card.Img
                             variant="top"
-                            src={news.image? news.image: noImageSmall}
+                            src={news.image ? news.image : noImageSmall}
                             className="card-img-2"
                           />
                           <Card.Body>
@@ -67,10 +67,10 @@ export default class CardsComponant extends React.Component {
                             <p>{news.author}</p>
                             <p>{news.description}</p>
                             <a
-                              className="text-decoration-none text-dark"
+                              className="text-decoration-none bg-dark text-white p-2"
                               href={news.url}
                             >
-                              Read More <FontAwesomeIcon icon="arrow-right" />
+                              Read More <HiArrowNarrowRight />
                             </a>
                           </Card.Body>
                         </Card>

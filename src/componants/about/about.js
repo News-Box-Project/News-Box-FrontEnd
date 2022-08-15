@@ -1,83 +1,204 @@
-import React from "react";
-import about from "./about.css"
 import "bootstrap/dist/css/bootstrap.min.css";
-import image from './abt-img/SuhiabAlnji.jpg';
+import React from "react";
+import { AiOutlineLinkedin } from "react-icons/ai";
+import { GoMarkGithub } from "react-icons/go";
+import "./about.css";
+import Abdullah from "./abt-img/abd.jpg";
+import Ahmad from "./abt-img/ahmad.jpg";
+import Fahad from "./abt-img/fahd.jpg";
+import Qais from "./abt-img/qais.jpg";
+import Sedra from "./abt-img/sedra.jpg";
+import image from "./abt-img/SuhiabAlnji.jpg";
+import Wlla from "./abt-img/walla.jpg";
+
 export default class About extends React.Component {
   render() {
     return (
       <>
-      <div className="about">
-        
- <section id="ABOUT">
-     <div class="about-1">
-         <h1> ABOUT US </h1>
-         <p>sint Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio sectetur minima soluta nulla, alias tenetur doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasisint Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio sectetur minima soluta nulla, alias tenetur doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasi</p>
-     </div>
-     <div id="about-2">
-     <div class="content-box-lg">
-         <div class="container">
-             <div class="row">
-                 <div class="col-md-4">
-                    <div class="about-item text-center">
-                  
-                     <h3>Suhaib Alnaji</h3>
-                     <img src={image} height={100} width={100} />                     <p> Lorem ipsum dolor sit amet, consealias tenetur doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasialias tenetur doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasictetur adipisicing elit. Ducimus optio  </p>
-                     </div>
-                 </div>
-                 <div class="col-md-4">
-                    <div class="about-item text-center">
-                   
-                     <h3>Ahmad </h3>
-                     
-                     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio sectetur minima soluta nulla, alias tenetur doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasialias tenetur doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores  </p>
-                     </div>
-                 </div>
-                 <div class="col-md-4">
-                    <div class="about-item text-center">
-                     
-                     <h3>Sedra </h3>
-                     <p> sint Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio sectetur minima soluta doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, be doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasi </p>
-                     </div>
+        <div className="about">
+          <section id="ABOUT">
+            <div className="about-1">
+              <div className="heading-box">
+                <h1 className="about-heading"> ABOUT US </h1>
+              </div>
+
+              <p id="discription" className="fs-4">
+                Here we are to inform you what is happening in the world around
+                you. <br />
+                All newly received or noteworthy information, especially about
+                recent events you will found it here.
+              </p>
+              <br />
+              <p id="discription2" className="fs-4">
+                Here's the best devs ever, We're full stack developer under
+                construction.
+              </p>
+            </div>
+            <div id="about-2">
+              <div className="content-box-lg">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={image} className="w-100" alt="Suhaib" />
+                        <h3 className="pt-3">Suhaib Alnaji</h3>
+                        <p>Computer Science.</p>
+                        <p>
+                          Contact Info: <br />
+                        </p>
+                        <a
+                          className="about-icon"
+                          href="https://github.com/SuhaibAln"
+                        >
+                          <GoMarkGithub />
+                        </a>
+                        <a
+                          className="about-icon"
+                          href="https://www.linkedin.com/in/suhaib-alnaji-0835181b9"
+                        >
+                          <AiOutlineLinkedin />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Ahmad} className="w-100" alt="Ahmad" />
+                        <h3 className="pt-3">Ahmad Jubran</h3>
+                        <p>Computer Engineer.</p>
+                        <p>
+                          Contact Info: <br />
+                        </p>
+                        <a
+                          className="about-icon"
+                          href="https://github.com/ahmadjubran"
+                        >
+                          <GoMarkGithub />
+                        </a>
+                        <a
+                          className="about-icon"
+                          href="https://www.linkedin.com/in/ahmad-jubran-44202a168/"
+                        >
+                          <AiOutlineLinkedin />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Sedra} className="w-100" alt="Sedra" />
+                        <h3 className="pt-3">Sedra Al-Sabbagh</h3>
+                        <p>Software Engineering.</p>
+                        <p>
+                          Contact Info: <br />
+                        </p>
+                        <a
+                          className="about-icon"
+                          href="https://github.com/Sadrah-Alsabagh"
+                        >
+                          <GoMarkGithub />
+                        </a>
+                        <a
+                          className="about-icon"
+                          href="https://www.linkedin.com/in/sedra-al-sabbagh-a6987b246/"
+                        >
+                          <AiOutlineLinkedin />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Fahad} className="w-100" alt="Fahad" />
+                        <h3 className="pt-3">Fahad Zidan</h3>
+                        <p>Electrical Power Engineer.</p>
+                        <p>
+                          Contact Info: <br />
+                        </p>
+                        <a
+                          className="about-icon"
+                          href="https://github.com/fha96"
+                        >
+                          <GoMarkGithub />
+                        </a>
+                        <a
+                          className="about-icon"
+                          href="https://www.linkedin.com/in/fahad-rimawe-9832a9172"
+                        >
+                          <AiOutlineLinkedin />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Qais} className="w-100" alt="Qais" />
+                        <h3 className="pt-3">Qais Alsgher</h3>
+                        <p>Software Engineering.</p>
+                        <p>
+                          Contact Info: <br />
+                        </p>
+                        <a
+                          className="about-icon"
+                          href="https://github.com/qais-alsgher"
+                        >
+                          <GoMarkGithub />
+                        </a>
+                        <a
+                          className="about-icon"
+                          href="https://www.linkedin.com/in/qais-alsgher-885902237/"
+                        >
+                          <AiOutlineLinkedin />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Wlla} className="w-100" alt="wlla" />
+                        <h3 className="pt-3">wlla Talafha</h3>
+                        <p>Electronics engineer.</p>
+                        <p>
+                          Contact Info: <br />
+                        </p>
+                        <a
+                          className="about-icon"
+                          href="https://github.com/WllaTalafha"
+                        >
+                          <GoMarkGithub />
+                        </a>
+                        <a
+                          className="about-icon"
+                          href="https://www.linkedin.com/in/wlla-talafha-54b528246"
+                        >
+                          <AiOutlineLinkedin />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="col-md-4">
+                      <div className="about-item text-center">
+                        <img src={Abdullah} className="w-100" alt="Abdullah" />
+                        <h3 className="pt-3">Abdullah Smadi</h3>
+                        <p>Computer Science.</p>
+                        <p>
+                          Contact Info: <br />
+                        </p>
+                        <a
+                          className="about-icon"
+                          href="https://github.com/Abdsmadi4"
+                        >
+                          <GoMarkGithub />
+                        </a>
+                        <a
+                          className="about-icon"
+                          href="https://www.linkedin.com/in/abdallah-smadi-68b093111/"
+                        >
+                          <AiOutlineLinkedin />
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-md-4">
-                    <div class="about-item text-center">
-                     
-                     <h3>Fahad </h3>
-                     <p> sint Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio sectetur minima soluta doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, be doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasi </p>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="about-item text-center">
-                     
-                     <h3>Qais </h3>
-                     <p> sint Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio sectetur minima soluta doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, be doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasi </p>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="about-item text-center">
-                     
-                     <h3>wlla </h3>
-                     <p> sint Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio sectetur minima soluta doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, be doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasi </p>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="about-item text-center">
-                     
-                     <h3>Abdullah </h3>
-                     <p> sint Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio sectetur minima soluta doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, be doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasi </p>
-                     </div>
-                  </div>
+                </div>
               </div>
             </div>
-         </div>
-      </div>   
- </section>
+          </section>
         </div>
-        </>
-         
-    ) 
-  
-  
-  
-  }}
-      
+      </>
+    );
+  }
+}
