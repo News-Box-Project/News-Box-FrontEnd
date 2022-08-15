@@ -32,19 +32,21 @@ export default class CardsComponant extends React.Component {
                             className="card-img-1"
                           />
                           <Card.Body>
-                            <h3>{news.title}</h3>
                             <div className="d-flex justify-content-around">
                               <span>{news.category}</span>
+                              <p>{news.author}</p>
                               <span>{news.published_at.slice(0, 10)}</span>
                             </div>
-                            <p>{news.author}</p>
-                            <p>{news.description}</p>
-                            <a
-                              className="text-decoration-none bg-dark text-white p-2"
-                              href={news.url}
-                            >
-                              Read More <HiArrowNarrowRight />
-                            </a>
+                            <h3>{news.title}</h3>
+                            <p>
+                              {news.description.slice(0, 200)}...
+                              <a
+                                className="text-decoration-none p-2 news-link"
+                                href={news.url}
+                              >
+                                More <HiArrowNarrowRight />
+                              </a>
+                            </p>
                           </Card.Body>
                         </Card>
                       </Col>
@@ -59,19 +61,21 @@ export default class CardsComponant extends React.Component {
                             className="card-img-2"
                           />
                           <Card.Body>
-                            <h3>{news.title}</h3>
                             <div className="d-flex justify-content-around">
                               <span>{news.category}</span>
+                              <p>{news.author}</p>
                               <span>{news.published_at.slice(0, 10)}</span>
                             </div>
-                            <p>{news.author}</p>
-                            <p>{news.description}</p>
-                            <a
-                              className="text-decoration-none bg-dark text-white p-2"
-                              href={news.url}
-                            >
-                              Read More <HiArrowNarrowRight />
-                            </a>
+                            <h3>{news.title}</h3>
+                            <p>
+                              {news.description.slice(0, 80)}...
+                              <a
+                                className="text-decoration-none p-2 news-link"
+                                href={news.url}
+                              >
+                                More <HiArrowNarrowRight />
+                              </a>
+                            </p>
                           </Card.Body>
                         </Card>
                       </Col>
