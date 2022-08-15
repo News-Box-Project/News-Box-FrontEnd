@@ -3,8 +3,8 @@ import "./admin.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import axios from "axios";
-import DataNews from "./DataNews";
-import AddNews from "./AddNews";
+import DataNews from "./dataNews";
+import AddNews from "./addNews";
 
 
 class Home extends React.Component {
