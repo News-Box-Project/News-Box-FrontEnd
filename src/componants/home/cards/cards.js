@@ -39,7 +39,7 @@ export default class CardsComponant extends React.Component {
                             </div>
                             <h3 className="fw-bold">{news.title}</h3>
                             <p>
-                              {news.description.slice(0, 200)}...
+                              {news.description.slice(0, 200)} ...
                               <a
                                 className="text-decoration-none p-2 news-link"
                                 href={news.url}
@@ -68,7 +68,7 @@ export default class CardsComponant extends React.Component {
                             </div>
                             <h3 className="fw-bold">{news.title}</h3>
                             <p>
-                              {news.description.slice(0, 80)}...
+                              {news.description.slice(0, 80)} ...
                               <a
                                 className="text-decoration-none p-2 news-link"
                                 href={news.url}
