@@ -4,7 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
-import "./Contact.css";
+import "./contact.css";
 export default class Contact extends React.Component {
   render() {
     return (

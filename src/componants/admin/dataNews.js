@@ -1,5 +1,5 @@
 import React from "react";
-import UpdateNews from "./UpdateNews";
+import UpdateNews from "./updateNews";
 export default class DataNews extends React.Component {
     constructor(props) {
         super(props);
