@@ -1,3 +1,39 @@
 .inputtext {
   width: 100% !important;
 }
+
+.logButton {
+  width: 110px !important;
+  height: 40px;
+  margin: top 10px;
+  font-size: 20px;
+}
+
+.logincontener {
+  height: 60vh;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.logincontener h2 {
+  font-size: 32px;
+  padding-top: 5px;
+}
+
+.logincontener p {
+  font-size: 22px;
+  border-top: 2px solid #222;
+  width: 25rem;
+  margin: 0 auto;
+  padding: 13px 0;
+}
+
+.logoutbut {
+  background: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 500;
+}

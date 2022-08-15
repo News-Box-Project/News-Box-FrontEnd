@@ -6,6 +6,7 @@ import AddNews from "./addNews";
 import "./admin.css";
 import DataNews from "./dataNews";
 
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -47,11 +48,12 @@ class Home extends React.Component {
     await axios.delete(`https://news-box-project.herokuapp.com/news/${id}`);
     this.getNews();
   };
-  //
+
+
 
   render() {
     return (
-      <>
+      <div className="mainAdmin">
         <div class="container ">
           <div className="crud shadow-lg p-3 mb-5 mt-5 bg-body rounded">
             <div class="row ">
@@ -106,7 +108,7 @@ class Home extends React.Component {
           handleClose={this.handleClose}
           getNews={this.getNews}
         />
-      </>
+      </div>
     );
   }
 }
