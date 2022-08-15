@@ -9,22 +9,22 @@ import Home from "./componants/home/home";
 import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
-<>
-    
-      
-    <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route exact path="/about" element={<About />}></Route>
-          <Route exact path="/contact-us" element={<Contact />}></Route>
-          <Route exact path="/admin" element={<Admin />}></Route>
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
-</>
+    <>
+
+
+      <Router>
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route exact path="/about" element={<About />}></Route>
+            <Route exact path="/contact-us" element={<Contact />}></Route>
+            <Route exact path="/admin" element={<Admin />}></Route>
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </>
   );
 }
 
