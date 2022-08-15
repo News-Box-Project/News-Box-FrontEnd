@@ -4,10 +4,18 @@
 
 .card-img-1 {
   border-radius: 0px !important;
-  aspect-ratio: 1980 / 1080;
+  aspect-ratio: 16 / 9;
 }
 
 .card-img-2 {
   border-radius: 0px !important;
   aspect-ratio: 1 / 1;
+}
+
+.news-link {
+  color: #d12121;
+}
+
+.news-link:hover {
+  color: #b12c2c;
 }

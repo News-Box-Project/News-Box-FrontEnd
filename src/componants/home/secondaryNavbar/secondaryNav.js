@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { BsSearch } from "react-icons/bs";
 import "./secondaryNav.css";
 
 export default class SecondaryNav extends React.Component {
@@ -58,20 +59,21 @@ export default class SecondaryNav extends React.Component {
                   Science
                 </Nav.Link>
               </Nav>
-              <div className="search d-flex gap-2">
-                <form
-                  className="d-flex gap-3"
-                  onSubmit={this.props.handleSearch}
-                >
-                  <input
-                    type="text"
-                    placeholder="Search"
-                    className="search-input pe-5 ps-3"
-                    id="inputValue"
-                  />
-                  <button type="submit" className="btn btn-light search-btn">
-                    Search
-                  </button>
+              <div>
+                <form onSubmit={this.props.handleSearch}>
+                  <div className="wrap">
+                    <div className="search">
+                      <input
+                        type="text"
+                        className="searchTerm"
+                        placeholder="What are you looking for?"
+                        id="inputValue"
+                      />
+                      <button type="submit" className="searchButton">
+                        <i className="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
                 </form>
               </div>
             </Navbar.Collapse>
@@ -80,4 +82,14 @@ export default class SecondaryNav extends React.Component {
       </div>
     );
   }
+}
+
+{
+  /* <input
+  type="text"
+  placeholder="Search"
+  className="search-input pe-5 ps-1 py-1"
+  id="inputValue"
+/>
+<BsSearch className="text-white my-auto fs-4" /> */
 }
