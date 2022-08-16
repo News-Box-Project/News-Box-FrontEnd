@@ -9,6 +9,7 @@ import Header from "./componants/header/header";
 import Home from "./componants/home/home";
 import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from "./componants/admin/login";
+import LocalNews from "./componants/home/LocalNews";
 
 function App() {
   const { isAuthenticated, user } = useAuth0();
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/contact-us" element={<Contact />}></Route>
           <Route exact path="/admin"
             element={isAuthenticated && user.email === "qaisalsgher@gmail.com" ? <Admin /> : <LoginButton />}></Route>
+        <Route exact path="/more/:id" element={<LocalNews />}></Route>
         </Routes>
         <Footer />
       </div>

@@ -37,3 +37,19 @@
   font-weight: bolder;
   font-size: 500;
 }
+
+.admin-btn {
+  background-color: #d12121;
+  border: none;
+  border-radius: 0;
+}
+
+.admin-btn:hover {
+  background-color: #9b1e1e;
+  color: #fff;
+}
+
+.admin-btn:focus {
+  outline: none;
+  background-color: #d12121;
+}

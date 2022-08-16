@@ -1,0 +1,30 @@
+.localNews-img {
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+.localNews-container {
+  width: 1000px;
+  margin: 0 auto 5rem auto;
+}
+
+.localNews-text-box {
+  gap: 20rem;
+  border-bottom: 1px solid #222;
+  margin-bottom: 1rem;
+}
+
+.localNews-description {
+  text-align: justify;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.card-subheading-1 {
+  color: #777;
+}
+
+.card-subheading-2 {
+  color: #555;
+}

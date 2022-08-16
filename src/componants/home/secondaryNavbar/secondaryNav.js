@@ -2,7 +2,6 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { BsSearch } from "react-icons/bs";
 import "./secondaryNav.css";
 
 export default class SecondaryNav extends React.Component {
@@ -82,14 +81,4 @@ export default class SecondaryNav extends React.Component {
       </div>
     );
   }
-}
-
-{
-  /* <input
-  type="text"
-  placeholder="Search"
-  className="search-input pe-5 ps-1 py-1"
-  id="inputValue"
-/>
-<BsSearch className="text-white my-auto fs-4" /> */
 }

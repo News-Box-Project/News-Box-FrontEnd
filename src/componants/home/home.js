@@ -19,6 +19,7 @@ export default class Home extends Component {
     this.setState({
       news: result.data,
     });
+    console.log(this.state.news);
   }
 
   handleChange = async (category) => {
