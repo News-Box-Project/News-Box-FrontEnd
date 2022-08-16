@@ -6,7 +6,6 @@ import AddNews from "./addNews";
 import "./admin.css";
 import DataNews from "./dataNews";
 
-
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +35,6 @@ class Home extends React.Component {
       this.setState({
         news: allnews.data,
       });
-      console.log(allnews.data);
     }
   };
   // to give data when open page
@@ -49,57 +47,51 @@ class Home extends React.Component {
     this.getNews();
   };
 
-
-
   render() {
     return (
       <div className="mainAdmin">
-        <div class="container ">
+        <div className="container ">
           <div className="crud shadow-lg p-3 mb-5 mt-5 bg-body rounded">
-            <div class="row ">
-              <div
-                class="col-sm-8 offset-sm-2 mt-5 mb-4 text-gred"
-                style={{ color: "black" }}
-              >
-                <h2>
-                  <b>Admin page</b>
-                </h2>
-              </div>
+            <div className="mt-5 mb-4 text-dark">
+              <h2>
+                <b>News Database</b>
+              </h2>
             </div>
-            <div class="row">
-              <div class="table-responsive ">
-                <table class="table table-striped table-hover table-bordered">
-                  <thead>
-                    <tr>
-                      <th>Index</th>
-                      <th>Title </th>
-                      <th>Author</th>
-                      <th>Date</th>
+            <div className="table-responsive ">
+              <table className="table table-striped table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th>Index</th>
+                    <th>Title </th>
+                    <th>Author</th>
+                    <th>Date</th>
 
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {this.state.news.map((ele, index) => {
-                      return (
-                        <>
-                          <DataNews
-                            data={ele}
-                            index={index}
-                            getNews={this.getNews}
-                            handleDelete={this.handleDelete}
-                          />
-                        </>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-              <div class="col-sm-15 offset-sm-5  mt-5 mb-4 text-gred">
-                <Button variant="primary" onClick={this.handleShow}>
-                  Add New Post
-                </Button>
-              </div>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {this.state.news.map((ele, index) => {
+                    return (
+                      <DataNews
+                        key={index}
+                        data={ele}
+                        index={index}
+                        getNews={this.getNews}
+                        handleDelete={this.handleDelete}
+                      />
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <div className="offset-sm-10  mt-5 mb-4 text-gred">
+              <Button
+                className="admin-btn"
+                variant="primary"
+                onClick={this.handleShow}
+              >
+                Add New Post
+              </Button>
             </div>
           </div>
         </div>
