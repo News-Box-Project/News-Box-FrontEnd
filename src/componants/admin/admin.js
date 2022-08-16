@@ -54,7 +54,7 @@ class Home extends React.Component {
           <div className="crud shadow-lg p-3 mb-5 mt-5 bg-body rounded">
             <div className="mt-5 mb-4 text-dark">
               <h2>
-                <b>News Database</b>
+                <b>News list</b>
               </h2>
             </div>
             <div className="table-responsive ">
