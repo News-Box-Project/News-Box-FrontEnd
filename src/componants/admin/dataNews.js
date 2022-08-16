@@ -26,7 +26,7 @@ export default class DataNews extends React.Component {
 
           <td>
             <a
-              href="#"
+              href="/admin"
               className="edit"
               title="Edit"
               data-toggle="tooltip"
@@ -35,7 +35,7 @@ export default class DataNews extends React.Component {
               <i className="material-icons">&#xE254;</i>
             </a>
             <a
-              href="#"
+              href="/admin"
               className="delete"
               title="Delete"
               data-toggle="tooltip"

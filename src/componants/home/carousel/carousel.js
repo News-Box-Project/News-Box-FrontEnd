@@ -10,8 +10,8 @@ export default class CarouselComponant extends React.Component {
         <Carousel>
           {this.props.news !== [] &&
             this.props.news.map((news, idx) => {
-              if (idx < 4) {
-                return (
+              return (
+                (idx === 0 || idx === 1 || idx === 2 || idx === 3) && (
                   <Carousel.Item key={idx}>
                     <img
                       className="d-block mx-auto carousel-img w-100"
@@ -49,8 +49,8 @@ export default class CarouselComponant extends React.Component {
                       </a>
                     )}
                   </Carousel.Item>
-                );
-              }
+                )
+              );
             })}
         </Carousel>
       </div>
