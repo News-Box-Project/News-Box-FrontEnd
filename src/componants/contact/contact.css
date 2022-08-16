@@ -1,13 +1,13 @@
 .contact-text1 {
   font-size: 18px;
   line-height: 1.6;
-  color: #999999;
+  color: #ccc;
 }
 
 .contact-text2 {
   font-size: 18px;
   line-height: 1.6;
-  color: #d12121;
+  color: #e65252;
 }
 
 /*==================================================================
@@ -66,7 +66,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /*==================================================================
@@ -136,6 +136,10 @@
   padding: 0 25px;
 }
 
+.input-box {
+  margin-bottom: 2rem;
+}
+
 input.contact-input {
   height: 40px;
   border: none;
@@ -164,8 +168,8 @@ textarea.contact-input {
   padding: 0 20px;
   min-width: 200px;
   height: 50px;
-  border-radius: 2px;
-  background: #d12121;
+  background: #e65252;
+  border: none;
 
   font-size: 12px;
   color: #fff;
@@ -227,6 +231,6 @@ textarea.contact-input {
 }
 
 .contact-text-box {
-  margin-top: 15rem;
+  margin-top: 10rem;
   gap: 4rem;
 }

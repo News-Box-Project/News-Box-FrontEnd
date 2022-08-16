@@ -29,11 +29,8 @@ export default class Contact extends React.Component {
               onSubmit={this.handleSubmit}
             >
               <span className="contact-form-title">Send Us A Message</span>
-              <label className="label-input" htmlFor="first-name">
-                Tell us your name *
-              </label>
               <div
-                className="wrap-input rs1-wrap-input validate-input"
+                className="wrap-input rs1-wrap-input validate-input input-box"
                 data-validate="Type first name"
               >
                 <input
@@ -46,7 +43,7 @@ export default class Contact extends React.Component {
                 <span className="focus-input"></span>
               </div>
               <div
-                className="wrap-input rs2-wrap-input validate-input"
+                className="wrap-input rs2-wrap-input validate-input input-box"
                 data-validate="Type last name"
               >
                 <input
@@ -57,11 +54,8 @@ export default class Contact extends React.Component {
                 />
                 <span className="focus-input"></span>
               </div>
-              <label className="label-input" htmlFor="email">
-                Enter your email *
-              </label>
               <div
-                className="wrap-input validate-input"
+                className="wrap-input validate-input input-box"
                 data-validate="Valid email is required: ex@abc.xyz"
               >
                 <input
@@ -73,10 +67,7 @@ export default class Contact extends React.Component {
                 />
                 <span className="focus-input"></span>
               </div>
-              <label className="label-input" htmlFor="phone">
-                Enter phone number
-              </label>
-              <div className="wrap-input">
+              <div className="wrap-input input-box">
                 <input
                   id="phone"
                   className="contact-input"
@@ -86,16 +77,13 @@ export default class Contact extends React.Component {
                 />
                 <span className="focus-input"></span>
               </div>
-              <label className="label-input" htmlFor="message">
-                Message *
-              </label>
               <div
-                className="wrap-input validate-input"
+                className="wrap-input validate-input input-box"
                 data-validate="Message is required"
               >
                 <textarea
                   id="message"
-                  className="contact-input"
+                  className="contact-input border-0"
                   name="message"
                   placeholder="Write us a message"
                 ></textarea>
