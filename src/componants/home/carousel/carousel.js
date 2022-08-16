@@ -18,6 +18,7 @@ export default class CarouselComponant extends Component {
                       src={news.image ? news.image : noImageLarge}
                       alt="First slide"
                     />
+                     {news.url &&
                     <a href={news.url} target="_blank" rel="noreferrer">
                       <Carousel.Caption className="carousel-text-box mb-4">
                         <h3>{news.title}</h3>
@@ -29,6 +30,20 @@ export default class CarouselComponant extends Component {
                         <p className="mb-4 px-5">{news.description}</p>
                       </Carousel.Caption>
                     </a>
+              }
+              {!news.url &&
+                    <a href={`more/${news._id}`} target="_blank" rel="noreferrer">
+                      <Carousel.Caption className="carousel-text-box mb-4">
+                        <h3>{news.title}</h3>
+                        <div className="d-flex justify-content-around">
+                          <span>{news.category}</span>
+                          <p>{news.author}</p>
+                          <span>{news.published_at.slice(0, 10)}</span>
+                        </div>
+                        <p className="mb-4 px-5">{news.description}</p>
+                      </Carousel.Caption>
+                    </a>
+              }
                   </Carousel.Item>
                 );
               }

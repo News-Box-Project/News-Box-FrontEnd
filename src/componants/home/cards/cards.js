@@ -1,18 +1,20 @@
-import React from "react";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import noImageLarge from "../assets/noImageLarge.png";
 import noImageSmall from "../assets/noImageSmall.png";
+import React from 'react'
+import { useParams } from 'react-router-dom'
 import "./cards.css";
+ function CardsComponant(props){
+  const {id}=useParams();
+  
 
-export default class CardsComponant extends React.Component {
-  render() {
     return (
       <Container>
         <div className="cards-container mb-5">
           <Row xs={1} className="g-4">
-            {this.props.news !== [] &&
-              this.props.news.map((news, idx) => {
+            {props.news !== [] &&
+              props.news.map((news, idx) => {
                 if (idx >= 4 && idx < 18) {
                   if (
                     idx === 4 ||
@@ -40,13 +42,30 @@ export default class CardsComponant extends React.Component {
                             <h3 className="fw-bold">{news.title}</h3>
                             <p>
                               {news.description.slice(0, 200)} ...
+                              {!news.url &&
                               <a
                                 className="text-decoration-none p-2 news-link"
-                                href={news.url}
-                              >
+                               
+                                href={`more/${news._id}`}
+                                                              >
                                 More <HiArrowNarrowRight />
                               </a>
+                              
+                              }  
+
+                               {news.url &&
+                              <a
+                                className="text-decoration-none p-2 news-link"
+                               
+                                href={news.url}
+                                                              >
+                                More <HiArrowNarrowRight />
+                              </a>
+                              
+                              }   
+
                             </p>
+
                           </Card.Body>
                         </Card>
                       </Col>
@@ -69,12 +88,26 @@ export default class CardsComponant extends React.Component {
                             <h3 className="fw-bold">{news.title}</h3>
                             <p>
                               {news.description.slice(0, 80)} ...
+                              {!news.url &&
                               <a
                                 className="text-decoration-none p-2 news-link"
-                                href={news.url}
-                              >
+                               
+                                href={`more/${news._id}`}
+                                                              >
                                 More <HiArrowNarrowRight />
                               </a>
+                              
+                              }   
+                                {news.url &&
+                              <a
+                                className="text-decoration-none p-2 news-link"
+                               
+                                href={news.url}
+                                                              >
+                                More <HiArrowNarrowRight />
+                              </a>
+                              
+                              }   
                             </p>
                           </Card.Body>
                         </Card>
@@ -88,4 +121,5 @@ export default class CardsComponant extends React.Component {
       </Container>
     );
   }
-}
+
+export default CardsComponant;
