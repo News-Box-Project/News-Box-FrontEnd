@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import "./LocalNews.css";
 
@@ -17,19 +16,17 @@ export default function LocalNews() {
     const { data } = await axios.get(
       `https://news-box-project.herokuapp.com/news/${id}`
     );
-    const obj = data[0];
     setTitle(data[0].title);
     setAuthor(data[0].author);
     setDescription(data[0].description);
     setImage(data[0].image);
     setDate(data[0].published_at.slice(0, 10));
     setCategory(data[0].category);
-    console.log(obj);
   }
 
   useEffect(() => {
     fetchData();
-  }, []);
+  });
 
   return (
     <>
