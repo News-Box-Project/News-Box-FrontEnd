@@ -23,7 +23,7 @@ export default class AddNews extends React.Component {
         }
         await axios.post(`https://news-box-project.herokuapp.com/news`, { newsAdd });
         this.getNews();
-    }
+    };
     render() {
         return (
             <>
@@ -56,4 +56,4 @@ export default class AddNews extends React.Component {
             </>
         )
     }
-}
+};

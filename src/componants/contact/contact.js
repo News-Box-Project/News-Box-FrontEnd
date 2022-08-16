@@ -1,9 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import FloatingLabel from "react-bootstrap/FloatingLabel";
-import Form from "react-bootstrap/Form";
+import { Container } from "react-bootstrap";
 import "./contact.css";
 import Screenshot_118 from "./Screenshot_118.png";
 export default class Contact extends React.Component {

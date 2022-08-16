@@ -11,7 +11,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import LoginButton from "./componants/admin/login";
 
 function App() {
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, user } = useAuth0();
   return (
     <Router>
       <div className="App">
@@ -21,7 +21,7 @@ function App() {
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/contact-us" element={<Contact />}></Route>
           <Route exact path="/admin"
-            element={isAuthenticated ? <Admin /> : <LoginButton />}></Route>
+            element={isAuthenticated && user.email === "qaisalsgher@gmail.com" ? <Admin /> : <LoginButton />}></Route>
         </Routes>
         <Footer />
       </div>
