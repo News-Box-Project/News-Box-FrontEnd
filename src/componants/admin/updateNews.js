@@ -1,8 +1,8 @@
+import axios from "axios";
 import React from "react";
 import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
-import axios from "axios";
+import Modal from "react-bootstrap/Modal";
 import "./admin.css";
 export default class UpdateNews extends React.Component {
   getNews = () => {
@@ -15,9 +15,9 @@ export default class UpdateNews extends React.Component {
       author: e.target.author.value,
       title: e.target.titleNews.value,
       description: e.target.description.value,
-      url: e.target.author.value,
+      url: e.target.linkPage.value,
       image: e.target.imgUrl.value,
-      category: e.target.linkPage.value,
+      category: e.target.category.value,
       published_at: e.target.date.value,
     };
     await axios.put(
@@ -51,6 +51,8 @@ export default class UpdateNews extends React.Component {
                   <Form.Control id="imgUrl" />
                   <Form.Label>Link</Form.Label>
                   <Form.Control id="linkPage" />
+                  <Form.Label>Category</Form.Label>
+                  <Form.Control id="category" />
                   <Form.Label>Date</Form.Label>
                   <Form.Control
                     id="date"
