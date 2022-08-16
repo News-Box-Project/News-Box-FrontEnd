@@ -19,3 +19,18 @@
 .news-link:hover {
   color: #b12c2c;
 }
+
+.card-subheading-1 {
+  color: #777;
+}
+
+.card-subheading-2 {
+  color: #555;
+}
+
+.card-subheading-box {
+  width: 90%;
+  border-bottom: 1px solid #222;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}

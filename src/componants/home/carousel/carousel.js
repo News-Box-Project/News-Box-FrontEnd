@@ -20,13 +20,19 @@ export default class CarouselComponant extends Component {
                     />
                     <a href={news.url} target="_blank" rel="noreferrer">
                       <Carousel.Caption className="carousel-text-box mb-4">
-                        <h3>{news.title}</h3>
                         <div className="d-flex justify-content-around">
-                          <span>{news.category}</span>
-                          <p>{news.author}</p>
-                          <span>{news.published_at.slice(0, 10)}</span>
+                          <span className="text-capitalize fw-bold">
+                            {news.category}
+                          </span>
+                          <p className="mb-2 fw-bold text-capitalize">
+                            {news.author}
+                          </p>
+                          <span className="fw-bold">
+                            {news.published_at.slice(0, 10)}
+                          </span>
                         </div>
-                        <p className="mb-4 px-5">{news.description}</p>
+                        <h3>{news.title}</h3>
+                        <p className="mb-4 px-5 fs-5">{news.description}</p>
                       </Carousel.Caption>
                     </a>
                   </Carousel.Item>
