@@ -8,7 +8,6 @@ export default class AddNews extends React.Component {
   getNews = () => {
     this.props.getNews();
   };
-
   handleCreatNews = async (e) => {
     e.preventDefault();
     const newsAdd = {

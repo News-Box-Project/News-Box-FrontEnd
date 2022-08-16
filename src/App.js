@@ -12,9 +12,8 @@ import LoginButton from "./componants/admin/login";
 import LocalNews from "./componants/home/LocalNews";
 
 function App() {
-  const { isAuthenticated } = useAuth0();
-    return (
-   
+  const { isAuthenticated, user } = useAuth0();
+  return (
     <Router>
       <div className="App">
         <Header />
@@ -23,7 +22,7 @@ function App() {
           <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/contact-us" element={<Contact />}></Route>
           <Route exact path="/admin"
-            element={isAuthenticated ? <Admin /> : <LoginButton />}></Route>
+            element={isAuthenticated && user.email === "qaisalsgher@gmail.com" ? <Admin /> : <LoginButton />}></Route>
         <Route exact path="/more/:id" element={<LocalNews />}></Route>
         </Routes>
         <Footer />
