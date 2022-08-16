@@ -34,13 +34,19 @@ import "./cards.css";
                             className="card-img-1"
                           />
                           <Card.Body>
-                            <div className="d-flex justify-content-around">
-                              <span>{news.category}</span>
-                              <p className="mb-2 fw-bold">{news.author}</p>
-                              <span>{news.published_at.slice(0, 10)}</span>
+                            <div className="d-flex justify-content-around card-subheading-box">
+                              <span className="text-capitalize fw-bold card-subheading-1">
+                                {news.category}
+                              </span>
+                              <p className="mb-2 fw-bold text-capitalize card-subheading-2">
+                                {news.author}
+                              </p>
+                              <span className="fw-bold card-subheading-1">
+                                {news.published_at.slice(0, 10)}
+                              </span>
                             </div>
                             <h3 className="fw-bold">{news.title}</h3>
-                            <p>
+                            <p className="fs-5">
                               {news.description.slice(0, 200)} ...
                               {!news.url &&
                               <a
@@ -80,13 +86,19 @@ import "./cards.css";
                             className="card-img-2"
                           />
                           <Card.Body>
-                            <div className="d-flex justify-content-around">
-                              <span>{news.category}</span>
-                              <p className="mb-2 fw-bold">{news.author}</p>
-                              <span>{news.published_at.slice(0, 10)}</span>
+                            <div className="d-flex justify-content-around card-subheading-box">
+                              <span className="text-capitalize fw-bold card-subheading-1">
+                                {news.category}
+                              </span>
+                              <p className="mb-2 fw-bold text-capitalize card-subheading-2">
+                                {news.author}
+                              </p>
+                              <span className="fw-bold card-subheading-1">
+                                {news.published_at.slice(0, 10)}
+                              </span>
                             </div>
                             <h3 className="fw-bold">{news.title}</h3>
-                            <p>
+                            <p className="fs-5">
                               {news.description.slice(0, 80)} ...
                               {!news.url &&
                               <a

@@ -8,22 +8,25 @@ import {
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 import "./footer.css";
+import logo from "./logo.png";
 export default class Footer extends React.Component {
   render() {
     return (
       <MDBFooter
         bgColor="dark"
-        className="text-center text-lg-start text-muted"
+        className="text-center text-lg-start text-muted pt-2"
       >
         <section className="">
           <MDBContainer className="text-center text-md-start mt-5">
             <MDBRow className="mt-3">
-              <MDBCol md="3" lg="4" xl="3" className="mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold mb-4 text-white footer-heading">
-                  <MDBIcon icon="gem" />
-                  About Info
-                </h6>
-                <p className="text-white">
+              <MDBCol md="3" lg="4" xl="4" className="mx-auto mb-4">
+                <div className="d-flex align-items-center gap-3">
+                  <img src={logo} alt="Logo" className="footer-logo" />
+                  <h4 className="text-uppercase fw-bold text-white pt-2 footer-heading">
+                    News Box
+                  </h4>
+                </div>
+                <p className="text-white mt-4 footer-text">
                   Here we are to inform you what is happening in the world
                   around you. All newly received or noteworthy information,
                   especially about recent events you will found it here.
@@ -51,8 +54,8 @@ export default class Footer extends React.Component {
               </MDBCol>
 
               <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-                <h6 className="text-uppercase fw-bold mb-4 text-white footer-heading">
-                  News Box
+                <h6 className="text-uppercase fw-bold mb-4 text-white pt-3 footer-heading">
+                  Links
                 </h6>
                 <p>
                   <a href="/" className="text-white text-decoration-none">
@@ -77,7 +80,7 @@ export default class Footer extends React.Component {
               </MDBCol>
 
               <MDBCol md="4" lg="3" xl="3" className="mx-auto mb-md-0 mb-4">
-                <h6 className="text-uppercase fw-bold mb-4 text-white footer-heading">
+                <h6 className="text-uppercase fw-bold mb-4 text-white pt-3 footer-heading">
                   Contact
                 </h6>
 
@@ -98,10 +101,7 @@ export default class Footer extends React.Component {
           </MDBContainer>
         </section>
 
-        <div
-          className="text-center p-4 text-white"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
-        >
+        <div className="text-center pt-3 pb-1 text-white">
           <p>
             &copy;{new Date().getFullYear()} News Box website - All Right
             Reserved

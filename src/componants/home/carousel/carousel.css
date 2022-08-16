@@ -3,5 +3,6 @@
 }
 
 .carousel-img {
-  aspect-ratio: 1980 / 900;
+  object-fit: cover;
+  aspect-ratio: 16/9;
 }

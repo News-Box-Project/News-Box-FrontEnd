@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React  from "react";
 import Carousel from "react-bootstrap/Carousel";
 import noImageLarge from "../assets/noImageLarge.png";
 import "./carousel.css";
@@ -53,3 +53,4 @@ export default class CarouselComponant extends Component {
     );
   }
 }
+export default CarouselComponent;
