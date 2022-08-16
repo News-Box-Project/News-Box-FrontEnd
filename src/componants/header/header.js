@@ -5,13 +5,10 @@ import Navbar from "react-bootstrap/Navbar";
 import "./header.css";
 import logo from "./logo/logo.png";
 import LogoutButton from "../admin/logout";
-import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Header() {
-  const {
-    isAuthenticated
-  } = useAuth0();
-
+  const { isAuthenticated } = useAuth0();
 
   return (
     <div>
@@ -45,22 +42,19 @@ function Header() {
               >
                 Contact Us
               </Nav.Link>
-              {isAuthenticated &&
+              {isAuthenticated && (
                 <Nav.Link
                   className="fs-5 text-uppercase px-3 fw-bold"
                   href="/admin"
                 >
                   Admin
                 </Nav.Link>
-              }
-              {isAuthenticated &&
-                <Nav.Link
-                  className="fs-5 text-uppercase px-3 fw-bold"
-                  href="/"
-                >
+              )}
+              {isAuthenticated && (
+                <Nav.Link className="fs-5 text-uppercase px-3 fw-bold" href="/">
                   <LogoutButton />
                 </Nav.Link>
-              }
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>
