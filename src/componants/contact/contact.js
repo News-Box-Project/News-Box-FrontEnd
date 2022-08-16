@@ -28,7 +28,7 @@ export default class Contact extends React.Component {
               className="contact-form validate-form"
               onSubmit={this.handleSubmit}
             >
-              <span className="contact-form-title">Send Us A Message</span>
+              <span className="contact-form-title">Send us a message</span>
               <div
                 className="wrap-input rs1-wrap-input validate-input input-box"
                 data-validate="Type first name"
