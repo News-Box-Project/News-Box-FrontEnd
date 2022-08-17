@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import "./LocalNews.css";
 
@@ -29,10 +30,10 @@ export default function LocalNews() {
   });
 
   return (
-    <>
-      <img className="localNews-img" src={image} alt="news" />
+    <Container>
+      <img className="w-100 localNews-img" src={image} alt="news" />
       <div className="localNews-container">
-        <div className="localNews-text-box d-flex justify-content-center">
+        <div className="localNews-text-box d-flex justify-content-between">
           <p className="text-capitalize fw-bold card-subheading-1">
             {category}
           </p>
@@ -44,6 +45,6 @@ export default function LocalNews() {
         <h1>{title}</h1>
         <p className="localNews-description">{description}</p>
       </div>
-    </>
+    </Container>
   );
 }
